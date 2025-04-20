@@ -11,7 +11,7 @@ const OrderList = () =>{
          const getOrderDetails = async()=>{
             setLoader(true)
         try{
-            const response = await fetch(`http://localhost:3000/api/orders`)
+            const response = await fetch(`https://veggis-fruits-backend.onrender.com/api/orders`)
             const data = await response.json()
         if(response.ok){
             setOrders(data.orders)
@@ -32,7 +32,7 @@ const OrderList = () =>{
 
     const handleUpdateStatus = async(orderId, newStatus) => {
         try{
-            const response = await fetch(`http://localhost:3000/api/orders/${orderId}`,{
+            const response = await fetch(`https://veggis-fruits-backend.onrender.com/api/orders/${orderId}`,{
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

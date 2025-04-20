@@ -15,7 +15,7 @@ const AdminProducts = () => {
         setLoader(true)
         setError(false)
         try {
-          const response = await fetch('http://localhost:3000/products');
+          const response = await fetch('https://veggis-fruits-backend.onrender.com/products');
           if (!response.ok) {
             setError(true)
             throw new Error(`Failed to fetch products: ${response.status}`);
@@ -42,7 +42,7 @@ const AdminProducts = () => {
     const onDeleteProduct = async(id) => {
         if (confirm("Are you sure you want to delete this product?")) {
             try {
-              const response = await fetch(`http://localhost:3000/api/products/${id}`, {
+              const response = await fetch(`https://veggis-fruits-backend.onrender.com/api/products/${id}`, {
                 method: "DELETE",
               });
               if (!response.ok) {
@@ -76,7 +76,7 @@ const AdminProducts = () => {
     
       const saveEdit = async (id) => {
         try {
-          const response = await fetch(`http://localhost:3000/api/products/${id}`, {
+          const response = await fetch(`https://veggis-fruits-backend.onrender.com/api/products/${id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",

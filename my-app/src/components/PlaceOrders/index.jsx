@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react'
+import {useState,useEffect} from 'react';
 import { Link,useNavigate } from 'react-router-dom'
 import {Navbar} from "../Navbar"
 import successful from '../../assets/successful.jpg'
@@ -81,7 +81,7 @@ const PlaceOrders = () => {
         };
         setFormError('')
         try {
-            const response = await fetch('http://localhost:3000/orders', {
+            const response = await fetch('https://veggis-fruits-backend.onrender.com/orders', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -200,4 +200,4 @@ const PlaceOrders = () => {
     )
 }
 
-export default PlaceOrders
+export default PlaceOrders;

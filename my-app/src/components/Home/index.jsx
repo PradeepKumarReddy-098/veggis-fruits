@@ -30,7 +30,7 @@ const Home = () => {
             setLoader(true)
             setError(false)
             try {
-              const response = await fetch('http://localhost:3000/products');
+              const response = await fetch('https://veggis-fruits-backend.onrender.com/products');
               if (!response.ok) {
                 setError(true)
                 throw new Error(`Failed to fetch products: ${response.status}`);
@@ -55,7 +55,7 @@ const Home = () => {
         setLoader(true)
         setError(false)
         try {
-          const response = await fetch('http://localhost:3000/products');
+          const response = await fetch('https://veggis-fruits-backend.onrender.com/products');
           if (!response.ok) {
             setError(true)
             throw new Error(`Failed to fetch products: ${response.status}`);

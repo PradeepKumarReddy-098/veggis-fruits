@@ -16,7 +16,7 @@ const AddProduct = () => {
         setLoading(true)
         setError('')
         try{
-            const response = await fetch('http://localhost:3000/api/products', {
+            const response = await fetch('https://veggis-fruits-backend.onrender.com/api/products', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const AddProduct = () => {
                 setNewProduct({ name: '', price_per_unit: '', image_url: '' })
               }
               else{
-                setError('Error in adding the Product')
+                setError('Error in adding the Product!')
               }
             
         }catch(err){
