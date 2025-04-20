@@ -1,0 +1,25 @@
+.admin-container{
+    color:#000;
+    padding:2rem;
+}
+
+.main-head{
+    text-align: center;
+}
+
+.all-avaliable-products{
+    list-style: none;
+    padding: 0rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width:768px) {
+    .all-avaliable-products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+}
+
